@@ -1,0 +1,74 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
+
+@import "tailwindcss";
+
+/* Custom Design System */
+@theme {
+  --color-deep-blue: #0f172a;
+  --color-deep-blue-light: #1e293b;
+  --color-slate-grey: #475569;
+  --color-slate-grey-light: #64748b;
+  --color-electric-blue: #3b82f6;
+  --color-electric-blue-light: #60a5fa;
+  --color-electric-blue-dark: #2563eb;
+  --color-light-grey: #f1f5f9;
+  --color-light-grey-dark: #e2e8f0;
+
+  --font-family-sans: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  background-color: var(--color-deep-blue);
+  color: white;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-deep-blue);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-slate-grey);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-electric-blue);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-electric-blue);
+  color: white;
+}
+
+/* Focus Outline */
+*:focus-visible {
+  outline: 2px solid var(--color-electric-blue);
+  outline-offset: 2px;
+}
+
+/* Fix browser autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: white !important;
+  -webkit-box-shadow: 0 0 0px 1000px #0f172a inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
